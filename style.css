@@ -1,0 +1,204 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --font-family: "Red Hat Display", sans-serif;
+}
+
+.mockup {
+  position: absolute;
+  width: 100%;
+  /* opacity: 0.5; */
+  z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background: none;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  padding: 6.9rem 2.5rem 10rem 2rem;
+  background: url("./images/pattern-background-mobile.svg") no-repeat center
+    top/contain;
+  background-color: var(--pale-blue);
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  text-align: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.hero {
+  width: 100%;
+}
+
+h1 {
+  margin-top: 2.8rem;
+  font-size: 2.27rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+p {
+  margin: 1.6rem auto 0;
+  font-size: 1.5rem;
+  width: 75%;
+  line-height: 1.65;
+  color: var(--desaturated-blue);
+}
+
+.payment-details {
+  width: 84%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-top: 2.6rem;
+  padding: 1.5rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 1rem;
+}
+
+.payment-details img {
+  width: auto;
+}
+
+.payment-details div {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  text-align: left;
+}
+
+.payment-details .payment-type {
+  font-size: 1.4rem;
+  padding-right: 2.7rem;
+  color: var(--dark-blue);
+}
+
+.payment-details .payment-value {
+  font-size: 1.4rem;
+  padding-top: 0.5rem;
+  color: var(--desaturated-blue);
+}
+
+.payment-details .payment-change a {
+  font-size: 1.3rem;
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+.btn-payment {
+  width: 85%;
+  margin: 2.4rem auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.5rem 0;
+  color: var(--very-pale-blue);
+  background-color: var(--bright-blue);
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 18px 4px hsla(245, 75%, 52%, 0.4);
+}
+
+.btn-cancel {
+  margin: 0.4rem auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 3.2rem;
+}
+
+.attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 1.2rem;
+  color: hsl(229, 73%, 58%);
+}
+
+@media (min-width: 992px) {
+  .main {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .payment-details .payment-type {
+    font-size: 1.9rem;
+  }
+
+  .payment-details .payment-value {
+    font-size: 1.9rem;
+  }
+
+  .payment-details .payment-change a {
+    font-size: 1.7rem;
+  }
+
+  .btn-payment {
+    font-size: 2rem;
+    padding: 1.8rem 0;
+  }
+
+  .btn-cancel {
+    font-size: 2.1rem;
+  }
+
+  .attribution a {
+    font-size: 1.5rem;
+    color: hsl(229, 73%, 58%);
+  }
+}
